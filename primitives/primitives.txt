@@ -1,0 +1,124 @@
+import java.lang.*;
+
+class Primitives
+{  
+    public static void main(String args[])
+    {
+        int myMinIntNumber = Integer.MIN_VALUE;
+        int myMaxIntNumber = Integer.MAX_VALUE;
+        System.out.println(myMinIntNumber);
+        System.out.println(myMaxIntNumber+1);
+        
+        // byte : 8 bits
+        byte minByte = Byte.MIN_VALUE;
+        byte maxByte = Byte.MAX_VALUE;
+        System.out.println(minByte);
+        System.out.println(maxByte);
+        
+        // short : 16 bits
+        short minShort = Short.MIN_VALUE;
+        short maxShort = Short.MAX_VALUE;
+        System.out.println(minShort);
+        System.out.println(maxShort);
+        
+        // int : 32 bits
+        long minLong = Long.MIN_VALUE;
+        long maxLong = Long.MAX_VALUE;
+        System.out.println(minLong);
+        System.out.println(maxLong);
+        
+        // long 64 bits
+        long bigLongNumber = 2147483647; // 32 bits
+        long bigLongNumberL = 2147483647L; // 64 bits
+        
+        //casting
+        byte newByte = (byte)(minByte/2); //act as integer
+        System.out.println(newByte);
+        
+        int newInt = 500;
+        short newShort = (short) (32000 + newInt); // act as integer
+        System.out.println(newShort);
+        
+        //floating numbers
+        //float 32 bits : single precision
+        //double 64 bits : double precision - more precision
+        //double is the default .point numbers
+        int myInt = 5;
+        float myFloat = 5.25f;
+        float myFloat_ = (float)5.25;//5.25 act as double
+        double myDouble = 5.25d;
+        
+        int myNewInt = 5;
+        float myNewFloat = 5f;
+        double myNewDouble = 5d;
+        System.out.println(myNewInt);
+        System.out.println(myNewFloat);
+        System.out.println(myNewDouble);
+        
+        int myNewInt_ = 5 / 3;
+        float myNewFloat_ = 5f / 3f;
+        double myNewDouble_ = 5d / 3d; // double have more precision
+        System.out.println(myNewInt_);
+        System.out.println(myNewFloat_);
+        System.out.println(myNewDouble_);
+        
+        float myNewFloat__ = (float)5.0 / 3f; //5.0 act as double
+        System.out.println(myNewFloat__);
+        
+        //int and double is the most common used and java default primitives
+        
+        
+        //char : 16 bits : 2 bytes : unicode : different languages : 16 bits = 65535 different types of characters
+        // unicode-table.com
+        char myChar = 'D';
+        char myUnicodeChar = '\u0044';
+        System.out.println(myChar);
+        System.out.println(myUnicodeChar);
+        
+        char myCopyRight = '\u00A9';
+        System.out.println(myCopyRight);
+        
+        //String is not a primitive, a Class
+        //String:32 bits act as the same as int in the memory: 2.147 billion characters
+        String myString = "\u00A9 2019";
+        System.out.println(myString);
+        
+        String lastString = "50";
+        int lastInt = 10;
+        lastString = lastString + lastInt;
+        System.out.println(lastString);
+        
+        //String is immutable
+        //You cant change a String after its created, instead create a new String
+        //When appending a String dont use String, use StringBuffer which can be changed.
+        
+        int result = 2;
+        result += 5; //result = result + 5;
+        System.out.println(result);
+        
+        int isCarInt = 20;
+        boolean isTheCase = isCarInt==20 ? true : false;
+        System.out.println(isTheCase);
+	
+	int tryit = 5;
+	tryit++; // act as tryit = tryit + 1;
+	tryit--; // act as tryit = tryit - 1;
+	
+	int anyInteger = 5;
+        if (anyInteger > 5)
+            System.out.println("anyInteger is bigger than 5");
+            System.out.println("This was executed");
+	
+	int anyInteger_ = 5;
+        if (anyInteger_ == 5){
+            int finalScore = anyInteger_;
+        }
+        System.out.println(finalScore);//error
+	
+	float fNumber = 5.00000f;
+        System.out.println("fNumber :" + String.format("%.2f",fNumber));
+
+	
+
+    }
+}
